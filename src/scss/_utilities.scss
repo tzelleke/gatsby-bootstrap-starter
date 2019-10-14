@@ -1,0 +1,135 @@
+$font-size-ratios: (
+    14: .875,
+    16: 1,
+    20: 1.25,
+    36: 2.25,
+    64: 4,
+    74: 4.625,
+    100: 6.25
+);
+
+@each $label, $ratio in $font-size-ratios {
+  .fs-#{$label} {
+    font-size: $ratio * $font-size-base;
+  }
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .fs-#{$breakpoint}-#{$label} {
+        font-size: $ratio * $font-size-base;
+      }
+    }
+  }
+}
+
+$line-height-ratios: (
+    90: 0.9,
+    100: 1,
+    108: 1.081,
+    117: 1.167,
+    125: 1.25,
+    129: 1.286,
+    150: 1.5,
+    160: 1.6,
+    200: 2
+);
+
+@each $label, $ratio in $line-height-ratios {
+  .lh-#{$label} {
+    line-height: $ratio;
+  }
+}
+
+$letter-spacings: 0, 1, 2, 3, 4, 6;
+
+@each $value in $letter-spacings {
+  .ls-#{$value} {
+    letter-spacing: $value * 1px;
+  }
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .ls-#{$breakpoint}-#{$value} {
+        letter-spacing: $value * 1px;
+      }
+    }
+  }
+}
+
+@each $size, $length in $sizes {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .w-#{$breakpoint}-#{$size} {
+        width: $length !important;
+      }
+    }
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    .aspect-#{$breakpoint}-16-9 {
+      padding-top: 56.25%;
+    }
+  }
+}
+
+.aspect-16-9 {
+  padding-top: 56.25%;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    @each $position in $positions {
+      .position-#{$breakpoint}-#{$position} { position: $position; }
+    }
+  }
+}
+
+@each $position in $positions {
+  .position-#{$position} { position: $position; }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    @each $prop in (top, right, bottom, left) {
+      .#{$prop}-#{$breakpoint}-0 {
+        #{$prop}: 0;
+      }
+    }
+  }
+}
+
+@each $prop in (top, right, bottom, left) {
+  .#{$prop}-0 {
+    #{$prop}: 0;
+  }
+}
+
+.pullup-headline {
+  @include media-breakpoint-up(md) {
+    height: 4em;
+    margin-bottom: -2.7em;
+  }
+}
+
+.min-height-headline {
+  @include media-breakpoint-up(md) {
+    min-height: 2.7em;
+  }
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.bg-size-cover {
+  background-size: cover;
+}
+
+.py-1px {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.z-1000 {
+  z-index: 1000;
+}
