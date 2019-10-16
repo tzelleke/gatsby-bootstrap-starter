@@ -1,5 +1,7 @@
 /* bootstrap REQUIRED */
 @import "../../node_modules/bootstrap/scss/functions";
+@import "colors.module";
+@import "breakpoints.module";
 @import "variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
@@ -9,7 +11,7 @@
 
 /* bootstrap OPTIONAL */
 @import "../../node_modules/bootstrap/scss/root";
-@import "../../node_modules/bootstrap/scss/reboot";
+@import "reboot";
 @import "../../node_modules/bootstrap/scss/type";
 @import "../../node_modules/bootstrap/scss/images";
 @import "../../node_modules/bootstrap/scss/code";
@@ -23,7 +25,7 @@
 @import "../../node_modules/bootstrap/scss/input-group";
 @import "../../node_modules/bootstrap/scss/custom-forms";
 @import "../../node_modules/bootstrap/scss/nav";
-@import "../../node_modules/bootstrap/scss/navbar";
+@import "navbar";
 @import "../../node_modules/bootstrap/scss/card";
 @import "../../node_modules/bootstrap/scss/breadcrumb";
 @import "../../node_modules/bootstrap/scss/pagination";
@@ -44,3 +46,4 @@
 @import "utilities";
 @import "base";
 @import "animations";
+@import "link-hover-underline";

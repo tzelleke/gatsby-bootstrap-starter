@@ -1,0 +1,22 @@
+.link-hover-underline {
+  a {
+    display: inline-block;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      margin-top: 2px;
+      height: 2px;
+      background-color: $link-hover-color;
+      transition: transform 250ms ease;
+      transform: scaleX(0);
+    }
+
+    @include hover {
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

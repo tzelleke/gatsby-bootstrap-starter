@@ -1,0 +1,12 @@
+- img: ../images/slide-1-unsplash.jpg
+  title: Slide One
+  text: Nulla vitae elit libero, a pharetra augue mollis interdum.
+- img: ../images/slide-2-unsplash.jpg
+  title: Slide Two
+  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- img: ../images/slide-3-unsplash.jpg
+  title: Slide Three
+  text: Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+- img: ../images/slide-1-unsplash.jpg
+  title: Slide Four
+  text: Nulla vitae elit libero, a pharetra augue mollis interdum.

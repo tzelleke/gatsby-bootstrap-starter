@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import { Container } from "react-bootstrap"
 
 const Footer = ({ siteTitle }) => (
-  <footer className="text-center bg-dark text-white py-5">
+  <footer className="link-hover-underline text-center bg-dark text-white py-5">
     <Container>
       {siteTitle} © {new Date().getFullYear()}, Built with
       {` `}

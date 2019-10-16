@@ -1,14 +1,13 @@
+const navbarHeight = 76
+
 const heading = {
-  fontSize: '4rem',
-  fontWeight: 'bold',
-  lineHeight: 1
+  fontSize: "4rem",
+  fontWeight: "bold",
+  lineHeight: 1,
 }
 
 const uppercased = {
-  textTransform: 'uppercase'
+  textTransform: "uppercase",
 }
 
-export {
-  heading,
-  uppercased
-}
+export { navbarHeight, heading, uppercased }

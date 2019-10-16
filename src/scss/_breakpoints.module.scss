@@ -1,0 +1,43 @@
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$gbp-sm: 576 !default;
+$cmw-sm: 540 !default;
+$gbp-md: 768 !default;
+$cmw-md: 720 !default;
+$gbp-lg: 992 !default;
+$cmw-lg: 960 !default;
+$gbp-xl: 1200 !default;
+$cmw-xl: 1140 !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: $gbp-sm * 1px,
+  md: $gbp-md * 1px,
+  lg: $gbp-lg * 1px,
+  xl: $gbp-xl * 1px,
+);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: $cmw-sm * 1px,
+  md: $cmw-md * 1px,
+  lg: $cmw-lg * 1px,
+  xl: $cmw-xl * 1px,
+);
+
+:export {
+  sm: $gbp-sm;
+  smCmw: $cmw-sm;
+  md: $gbp-md;
+  mdCmw: $cmw-md;
+  lg: $gbp-lg;
+  lgCmw: $cmw-lg;
+  xl: $gbp-xl;
+  xlCmw: $cmw-xl;
+}
